@@ -15,6 +15,32 @@ class Peserta_model extends CI_Model
         parent::__construct();
     }
 
+    function json() {
+        $this->datatables->select('id_peserta,nama_peserta,no_ktp,no_anggota,tanggal_terdaftar,komisariat');
+        $this->datatables->from('peserta');
+        //add this line for join
+        //$this->datatables->join('table2', 'records.field = table2.field');
+        //$this->datatables->add_column('action', anchor(site_url('records/read/$1'),'Read')." | ".anchor(site_url('records/update/$1'),'Update')." | ".anchor(site_url('records/delete/$1'),'Delete','onclick="javasciprt: return confirm(\'Are You Sure ?\')"'), 'id_records');
+        $this->datatables->add_column(
+            'action', 
+            '<div class="dropdown">
+            <button class="btn btn-danger dropdown-toggle" type="button" data-toggle="dropdown">Pilihan
+            <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+            <li><a href="peserta/detail_pembayaran/$1" title="detail">Detail Pembayaran</a></li>
+            <li><a href="peserta/pembayaran/$1" title="detail">Pembayaran</a></li>
+            <li><a href="peserta/read/$1" title="detail">Detail Peserta</a></li>
+            <li><a href="peserta/update/$1" title="detail">Edit Peserta</a></li>
+            <li class="divider"></li>
+            <li><a href="peserta/delete/$1" title="delete" onclick="javasciprt: return confirm("Apakah anda yakin ?")">Hapus Peserta</a></li>
+            </ul>
+            </div>',
+            'id_peserta'
+        );
+        $this->db->order_by($this->id, 'DESC');
+        return $this->datatables->generate();
+    }
+
     // get all
     function get_all()
     {

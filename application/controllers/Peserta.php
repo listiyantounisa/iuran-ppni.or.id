@@ -14,6 +14,7 @@ class Peserta extends CI_Controller
         $this->load->model('Pembayaran_model');
         $this->load->library('form_validation');
         $this->load->helper('rupiah');
+        $this->load->library('datatables');
 		
 		if (!$this->ion_auth->logged_in())
 		{
@@ -30,6 +31,11 @@ class Peserta extends CI_Controller
         );
 
         $this->template->load('template','peserta/peserta_list', $data);
+    }
+
+    public function json() {
+        header('Content-Type: application/json');
+        echo $this->Peserta_model->json();
     }
 
     public function read($id) 
@@ -70,11 +76,11 @@ class Peserta extends CI_Controller
             redirect(site_url('peserta'));
         }
     }
-	
-	public function detail_pembayaran($id) 
+
+    public function detail_pembayaran($id) 
     {
-        $row = $this->Peserta_model->get_by_id_join($id);
-		$idpeserta = $this->uri->segment(3);
+        $row = $this->Peserta_model->get_by_id($id);
+         $idpeserta = $this->uri->segment(3);
         $detail2013 = $this->Pembayaran_model->get_by_id2013($idpeserta);
         $detail2014 = $this->Pembayaran_model->get_by_id2014($idpeserta);
         $detail2015 = $this->Pembayaran_model->get_by_id2015($idpeserta);
@@ -82,19 +88,18 @@ class Peserta extends CI_Controller
         $detail2017 = $this->Pembayaran_model->get_by_id2017($idpeserta);
         if ($row) {
             $data = array(
-			'action' => site_url('peserta/pembayaran_action'),
-			'id_peserta' => $row->id_peserta,
-			'nama_peserta' => $row->nama_peserta,
-			'no_ktp' => $row->no_ktp,
-			'no_anggota' => $row->no_anggota,
-			'tanggal_terdaftar' => $row->tanggal_terdaftar,
-			'komisariat' => $row->komisariat,
-			'detail_pembayaran2013_data' => $detail2013,
-			'detail_pembayaran2014_data' => $detail2014,
-			'detail_pembayaran2015_data' => $detail2015,
-			'detail_pembayaran2016_data' => $detail2016,
-			'detail_pembayaran2017_data' => $detail2017,
-			);
+                'id_peserta' => $row->id_peserta,
+                'nama_peserta' => $row->nama_peserta,
+                'no_ktp' => $row->no_ktp,
+                'no_anggota' => $row->no_anggota,
+                'tanggal_terdaftar' => $row->tanggal_terdaftar,
+                'komisariat' => $row->komisariat,
+                'detail_pembayaran2013_data' => $detail2013,
+                'detail_pembayaran2014_data' => $detail2014,
+                'detail_pembayaran2015_data' => $detail2015,
+                'detail_pembayaran2016_data' => $detail2016,
+                'detail_pembayaran2017_data' => $detail2017,
+            );
             $this->template->load('template','peserta/detail_pembayaran', $data);
         } else {
             $this->session->set_flashdata('message', 'Record Not Found');
@@ -164,28 +169,44 @@ class Peserta extends CI_Controller
         
     }
 
-     public function update_status_dpp($id) 
+    public function update_status_dpp($id) 
     {
-        $ref = $this->uri->segment(3);
+        $ref = $this->uri->segment(4);
         $data = array(
             'status_transfer_dpp' => 1,
         );
-
-            $this->Pembayaran_model->update($id, $data);
-            $this->session->set_flashdata('message', 'Update Record Success');
-            redirect(site_url('peserta/pembayaran/'));
+        $this->Pembayaran_model->update($id, $data);
+        redirect(site_url('peserta/detail_pembayaran/'.$ref));
     }
 
     public function update_status_dpw($id) 
     {
-        $ref = $this->uri->segment(3);
+        $ref = $this->uri->segment(4);
         $data = array(
             'status_transfer_dpw' => 1,
         );
+        $this->Pembayaran_model->update($id, $data);
+        redirect(site_url('peserta/detail_pembayaran/'.$ref));
+    }
 
-            $this->Pembayaran_model->update($id, $data);
-            $this->session->set_flashdata('message', 'Update Record Success');
-            redirect(site_url('peserta/detail_pembayaran/'.$ref));
+    public function update_status_dpd($id) 
+    {
+        $ref = $this->uri->segment(4);
+        $data = array(
+            'status_transfer_dpd' => 1,
+        );
+        $this->Pembayaran_model->update($id, $data);
+        redirect(site_url('peserta/detail_pembayaran/'.$ref));
+    }
+
+    public function update_status_dpk($id) 
+    {
+        $ref = $this->uri->segment(4);
+        $data = array(
+            'status_transfer_dpk' => 1,
+        );
+        $this->Pembayaran_model->update($id, $data);
+        redirect(site_url('peserta/detail_pembayaran/'.$ref));
     }
     
     public function update($id) 

@@ -46,8 +46,8 @@
 						<th>Icn</th>
 						<th>Rekomendasi</th>
 						<th>Kontribusi Gedung</th>
-						<th>DPP</th>
 						<th>DPW</th>
+						<th>DPP</th>
 						<th>DPD</th>
 						<th>DPK</th>
 					</tr>
@@ -75,10 +75,10 @@
 						<td><?php echo format_rupiah($pembayaran2013->rekomendasi) ?></td>
 						<td><?php echo format_rupiah($pembayaran2013->kontribusi_gedung) ?></td>
 						
-						<td><?php if($pembayaran2013->status_transfer_dpp == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('update_status_dpw'.$pembayaran2013->id_pembayaran);?>">Ubah Status</a></td>
-						<td><?php if($pembayaran2013->status_transfer_dpw == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="#">Ubah Status</a></td>
-						<td><?php if($pembayaran2013->status_transfer_dpd == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="#">Ubah Status</a></td>
-						<td><?php if($pembayaran2013->status_transfer_dpk == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="#">Ubah Status</a></td>
+						<td><?php if($pembayaran2013->status_transfer_dpp == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpp/'.$pembayaran2013->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
+						<td><?php if($pembayaran2013->status_transfer_dpw == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpw/'.$pembayaran2013->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
+						<td><?php if($pembayaran2013->status_transfer_dpd == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpd/'.$pembayaran2013->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
+						<td><?php if($pembayaran2013->status_transfer_dpk == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpk/'.$pembayaran2013->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
 						<?php }} ?>
 					</tbody>
 				  </table>
@@ -99,8 +99,8 @@
 						<th>Icn</th>
 						<th>Rekomendasi</th>
 						<th>Kontribusi Gedung</th>
-						<th>DPW</th>
 						<th>DPP</th>
+						<th>DPW</th>
 						<th>DPD</th>
 						<th>DPK</th>
 					</tr>
@@ -121,10 +121,10 @@
 						<td><?php echo format_rupiah($pembayaran2014->icn) ?></td>
 						<td><?php echo format_rupiah($pembayaran2014->rekomendasi) ?></td>
 						<td><?php echo format_rupiah($pembayaran2014->kontribusi_gedung) ?></td>
-						<td><?php if($pembayaran2014->status_transfer_dpp == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="#">Ubah Status</a></td>
-						<td><?php if($pembayaran2014->status_transfer_dpw == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="#">Ubah Status</a></td>
-						<td><?php if($pembayaran2014->status_transfer_dpd == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="#">Ubah Status</a></td>
-						<td><?php if($pembayaran2014->status_transfer_dpk == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="#">Ubah Status</a></td>
+						<td><?php if($pembayaran2014->status_transfer_dpp == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpp/'.$pembayaran2014->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
+						<td><?php if($pembayaran2014->status_transfer_dpw == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpw/'.$pembayaran2014->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
+						<td><?php if($pembayaran2014->status_transfer_dpd == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpd/'.$pembayaran2014->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
+						<td><?php if($pembayaran2014->status_transfer_dpk == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpk/'.$pembayaran2014->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
 						<?php }} ?>
 					</tbody>
 				</table>
@@ -145,8 +145,8 @@
 						<th>Icn</th>
 						<th>Rekomendasi</th>
 						<th>Kontribusi Gedung</th>
-						<th>DPW</th>
 						<th>DPP</th>
+						<th>DPW</th>
 						<th>DPD</th>
 						<th>DPK</th>
 					</tr>
@@ -167,10 +167,10 @@
 						<td><?php echo format_rupiah($pembayaran2015->icn) ?></td>
 						<td><?php echo format_rupiah($pembayaran2015->rekomendasi) ?></td>
 						<td><?php echo format_rupiah($pembayaran2015->kontribusi_gedung) ?></td>
-						<td><?php if($pembayaran2015->status_transfer_dpp == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="#">Ubah Status</a></td>
-						<td><?php if($pembayaran2015->status_transfer_dpw == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="#">Ubah Status</a></td>
-						<td><?php if($pembayaran2015->status_transfer_dpd == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="#">Ubah Status</a></td>
-						<td><?php if($pembayaran2015->status_transfer_dpk == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="#">Ubah Status</a></td>
+						<td><?php if($pembayaran2015->status_transfer_dpp == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpp/'.$pembayaran2015->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
+						<td><?php if($pembayaran2015->status_transfer_dpw == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpw/'.$pembayaran2015->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
+						<td><?php if($pembayaran2015->status_transfer_dpd == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpd/'.$pembayaran2015->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
+						<td><?php if($pembayaran2015->status_transfer_dpk == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpk/'.$pembayaran2015->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
 						<?php }} ?>
 					</tbody>
 					</table>
@@ -191,8 +191,8 @@
 						<th>Icn</th>
 						<th>Rekomendasi</th>
 						<th>Kontribusi Gedung</th>
-						<th>DPW</th>
 						<th>DPP</th>
+						<th>DPW</th>
 						<th>DPD</th>
 						<th>DPK</th>
 					</tr>
@@ -213,10 +213,10 @@
 						<td><?php echo format_rupiah($pembayaran2016->icn) ?></td>
 						<td><?php echo format_rupiah($pembayaran2016->rekomendasi) ?></td>
 						<td><?php echo format_rupiah($pembayaran2016->kontribusi_gedung) ?></td>
-						<td><?php if($pembayaran2016->status_transfer_dpp == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="#">Ubah Status</a></td>
-						<td><?php if($pembayaran2016->status_transfer_dpw == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="#">Ubah Status</a></td>
-						<td><?php if($pembayaran2016->status_transfer_dpd == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="#">Ubah Status</a></td>
-						<td><?php if($pembayaran2016->status_transfer_dpk == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="#">Ubah Status</a></td>
+						<td><?php if($pembayaran2016->status_transfer_dpp == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpp/'.$pembayaran2016->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
+						<td><?php if($pembayaran2016->status_transfer_dpw == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpw/'.$pembayaran2016->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
+						<td><?php if($pembayaran2016->status_transfer_dpd == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpd/'.$pembayaran2016->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
+						<td><?php if($pembayaran2016->status_transfer_dpk == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpk/'.$pembayaran2016->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
 						<?php }} ?>
 					</tbody>
 				</table>
@@ -237,8 +237,8 @@
 						<th>Icn</th>
 						<th>Rekomendasi</th>
 						<th>Kontribusi Gedung</th>
-						<th>DPW</th>
 						<th>DPP</th>
+						<th>DPW</th>
 						<th>DPD</th>
 						<th>DPK</th>
 					</tr>
@@ -259,10 +259,10 @@
 						<td><?php echo format_rupiah($pembayaran2017->icn) ?></td>
 						<td><?php echo format_rupiah($pembayaran2017->rekomendasi) ?></td>
 						<td><?php echo format_rupiah($pembayaran2017->kontribusi_gedung) ?></td>
-						<td><?php if($pembayaran2017->status_transfer_dpp == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="#">Ubah Status</a></td>
-						<td><?php if($pembayaran2017->status_transfer_dpw == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="#">Ubah Status</a></td>
-						<td><?php if($pembayaran2017->status_transfer_dpd == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="#">Ubah Status</a></td>
-						<td><?php if($pembayaran2017->status_transfer_dpk == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="#">Ubah Status</a></td>
+						<td><?php if($pembayaran2017->status_transfer_dpp == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpp/'.$pembayaran2017->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
+						<td><?php if($pembayaran2017->status_transfer_dpw == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpw/'.$pembayaran2017->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
+						<td><?php if($pembayaran2017->status_transfer_dpd == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpd/'.$pembayaran2017->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
+						<td><?php if($pembayaran2017->status_transfer_dpk == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpk/'.$pembayaran2017->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
 						<?php }} ?>
 					</tbody>
 				</table>
@@ -274,7 +274,7 @@
 			<?php }elseif($tahundaftar == 2014){ ?>
 				<div class="nav-tabs-custom">
                 <ul class="nav nav-tabs">
-                  <li class="active"><a href="#detail2014" data-toggle="tab">Detail Pembayaran 2014</a></li>
+				  <li class="active"><a href="#detail2014" data-toggle="tab">Detail Pembayaran 2014</a></li>
                   <li><a href="#detail2015" data-toggle="tab">Detail Pembayaran 2015</a></li>
                   <li><a href="#detail2016" data-toggle="tab">Detail Pembayaran 2016</a></li>
                   <li><a href="#detail2017" data-toggle="tab">Detail Pembayaran 2017</a></li>
@@ -295,8 +295,8 @@
 						<th>Icn</th>
 						<th>Rekomendasi</th>
 						<th>Kontribusi Gedung</th>
-						<th>DPW</th>
 						<th>DPP</th>
+						<th>DPW</th>
 						<th>DPD</th>
 						<th>DPK</th>
 					</tr>
@@ -317,10 +317,10 @@
 						<td><?php echo format_rupiah($pembayaran2014->icn) ?></td>
 						<td><?php echo format_rupiah($pembayaran2014->rekomendasi) ?></td>
 						<td><?php echo format_rupiah($pembayaran2014->kontribusi_gedung) ?></td>
-						<td><?php if($pembayaran2014->status_transfer_dpp == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="#">Ubah Status</a></td>
-						<td><?php if($pembayaran2014->status_transfer_dpw == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="#">Ubah Status</a></td>
-						<td><?php if($pembayaran2014->status_transfer_dpd == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="#">Ubah Status</a></td>
-						<td><?php if($pembayaran2014->status_transfer_dpk == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="#">Ubah Status</a></td>
+						<td><?php if($pembayaran2014->status_transfer_dpp == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpp/'.$pembayaran2014->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
+						<td><?php if($pembayaran2014->status_transfer_dpw == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpw/'.$pembayaran2014->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
+						<td><?php if($pembayaran2014->status_transfer_dpd == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpd/'.$pembayaran2014->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
+						<td><?php if($pembayaran2014->status_transfer_dpk == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpk/'.$pembayaran2014->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
 						<?php }} ?>
 					</tbody>
 				</table>
@@ -341,8 +341,8 @@
 						<th>Icn</th>
 						<th>Rekomendasi</th>
 						<th>Kontribusi Gedung</th>
-						<th>DPW</th>
 						<th>DPP</th>
+						<th>DPW</th>
 						<th>DPD</th>
 						<th>DPK</th>
 					</tr>
@@ -363,10 +363,10 @@
 						<td><?php echo format_rupiah($pembayaran2015->icn) ?></td>
 						<td><?php echo format_rupiah($pembayaran2015->rekomendasi) ?></td>
 						<td><?php echo format_rupiah($pembayaran2015->kontribusi_gedung) ?></td>
-						<td><?php if($pembayaran2015->status_transfer_dpp == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="#">Ubah Status</a></td>
-						<td><?php if($pembayaran2015->status_transfer_dpw == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="#">Ubah Status</a></td>
-						<td><?php if($pembayaran2015->status_transfer_dpd == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="#">Ubah Status</a></td>
-						<td><?php if($pembayaran2015->status_transfer_dpk == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="#">Ubah Status</a></td>
+						<td><?php if($pembayaran2015->status_transfer_dpp == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpp/'.$pembayaran2015->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
+						<td><?php if($pembayaran2015->status_transfer_dpw == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpw/'.$pembayaran2015->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
+						<td><?php if($pembayaran2015->status_transfer_dpd == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpd/'.$pembayaran2015->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
+						<td><?php if($pembayaran2015->status_transfer_dpk == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpk/'.$pembayaran2015->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
 						<?php }} ?>
 					</tbody>
 					</table>
@@ -387,8 +387,8 @@
 						<th>Icn</th>
 						<th>Rekomendasi</th>
 						<th>Kontribusi Gedung</th>
-						<th>DPW</th>
 						<th>DPP</th>
+						<th>DPW</th>
 						<th>DPD</th>
 						<th>DPK</th>
 					</tr>
@@ -409,10 +409,10 @@
 						<td><?php echo format_rupiah($pembayaran2016->icn) ?></td>
 						<td><?php echo format_rupiah($pembayaran2016->rekomendasi) ?></td>
 						<td><?php echo format_rupiah($pembayaran2016->kontribusi_gedung) ?></td>
-						<td><?php if($pembayaran2016->status_transfer_dpp == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="#">Ubah Status</a></td>
-						<td><?php if($pembayaran2016->status_transfer_dpw == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="#">Ubah Status</a></td>
-						<td><?php if($pembayaran2016->status_transfer_dpd == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="#">Ubah Status</a></td>
-						<td><?php if($pembayaran2016->status_transfer_dpk == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="#">Ubah Status</a></td>
+						<td><?php if($pembayaran2016->status_transfer_dpp == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpp/'.$pembayaran2016->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
+						<td><?php if($pembayaran2016->status_transfer_dpw == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpw/'.$pembayaran2016->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
+						<td><?php if($pembayaran2016->status_transfer_dpd == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpd/'.$pembayaran2016->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
+						<td><?php if($pembayaran2016->status_transfer_dpk == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpk/'.$pembayaran2016->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
 						<?php }} ?>
 					</tbody>
 				</table>
@@ -433,8 +433,8 @@
 						<th>Icn</th>
 						<th>Rekomendasi</th>
 						<th>Kontribusi Gedung</th>
-						<th>DPW</th>
 						<th>DPP</th>
+						<th>DPW</th>
 						<th>DPD</th>
 						<th>DPK</th>
 					</tr>
@@ -455,10 +455,10 @@
 						<td><?php echo format_rupiah($pembayaran2017->icn) ?></td>
 						<td><?php echo format_rupiah($pembayaran2017->rekomendasi) ?></td>
 						<td><?php echo format_rupiah($pembayaran2017->kontribusi_gedung) ?></td>
-						<td><?php if($pembayaran2017->status_transfer_dpp == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="#">Ubah Status</a></td>
-						<td><?php if($pembayaran2017->status_transfer_dpw == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="#">Ubah Status</a></td>
-						<td><?php if($pembayaran2017->status_transfer_dpd == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="#">Ubah Status</a></td>
-						<td><?php if($pembayaran2017->status_transfer_dpk == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="#">Ubah Status</a></td>
+						<td><?php if($pembayaran2017->status_transfer_dpp == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpp/'.$pembayaran2017->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
+						<td><?php if($pembayaran2017->status_transfer_dpw == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpw/'.$pembayaran2017->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
+						<td><?php if($pembayaran2017->status_transfer_dpd == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpd/'.$pembayaran2017->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
+						<td><?php if($pembayaran2017->status_transfer_dpk == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpk/'.$pembayaran2017->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
 						<?php }} ?>
 					</tbody>
 				</table>
@@ -470,7 +470,7 @@
               <?php }elseif($tahundaftar == 2015){ ?>
               <div class="nav-tabs-custom">
                 <ul class="nav nav-tabs">
-                  <li class="active"><a href="#detail2015" data-toggle="tab">Detail Pembayaran 2015</a></li>
+				  <li class="active"><a href="#detail2015" data-toggle="tab">Detail Pembayaran 2015</a></li>
                   <li><a href="#detail2016" data-toggle="tab">Detail Pembayaran 2016</a></li>
                   <li><a href="#detail2017" data-toggle="tab">Detail Pembayaran 2017</a></li>
                 </ul>
@@ -490,8 +490,8 @@
 						<th>Icn</th>
 						<th>Rekomendasi</th>
 						<th>Kontribusi Gedung</th>
-						<th>DPW</th>
 						<th>DPP</th>
+						<th>DPW</th>
 						<th>DPD</th>
 						<th>DPK</th>
 					</tr>
@@ -512,10 +512,10 @@
 						<td><?php echo format_rupiah($pembayaran2015->icn) ?></td>
 						<td><?php echo format_rupiah($pembayaran2015->rekomendasi) ?></td>
 						<td><?php echo format_rupiah($pembayaran2015->kontribusi_gedung) ?></td>
-						<td><?php if($pembayaran2015->status_transfer_dpp == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="#">Ubah Status</a></td>
-						<td><?php if($pembayaran2015->status_transfer_dpw == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="#">Ubah Status</a></td>
-						<td><?php if($pembayaran2015->status_transfer_dpd == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="#">Ubah Status</a></td>
-						<td><?php if($pembayaran2015->status_transfer_dpk == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="#">Ubah Status</a></td>
+						<td><?php if($pembayaran2015->status_transfer_dpp == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpp/'.$pembayaran2015->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
+						<td><?php if($pembayaran2015->status_transfer_dpw == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpw/'.$pembayaran2015->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
+						<td><?php if($pembayaran2015->status_transfer_dpd == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpd/'.$pembayaran2015->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
+						<td><?php if($pembayaran2015->status_transfer_dpk == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpk/'.$pembayaran2015->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
 						<?php }} ?>
 					</tbody>
 					</table>
@@ -536,8 +536,8 @@
 						<th>Icn</th>
 						<th>Rekomendasi</th>
 						<th>Kontribusi Gedung</th>
-						<th>DPW</th>
 						<th>DPP</th>
+						<th>DPW</th>
 						<th>DPD</th>
 						<th>DPK</th>
 					</tr>
@@ -558,10 +558,10 @@
 						<td><?php echo format_rupiah($pembayaran2016->icn) ?></td>
 						<td><?php echo format_rupiah($pembayaran2016->rekomendasi) ?></td>
 						<td><?php echo format_rupiah($pembayaran2016->kontribusi_gedung) ?></td>
-						<td><?php if($pembayaran2016->status_transfer_dpp == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="#">Ubah Status</a></td>
-						<td><?php if($pembayaran2016->status_transfer_dpw == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="#">Ubah Status</a></td>
-						<td><?php if($pembayaran2016->status_transfer_dpd == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="#">Ubah Status</a></td>
-						<td><?php if($pembayaran2016->status_transfer_dpk == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="#">Ubah Status</a></td>
+						<td><?php if($pembayaran2016->status_transfer_dpp == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpp/'.$pembayaran2016->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
+						<td><?php if($pembayaran2016->status_transfer_dpw == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpw/'.$pembayaran2016->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
+						<td><?php if($pembayaran2016->status_transfer_dpd == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpd/'.$pembayaran2016->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
+						<td><?php if($pembayaran2016->status_transfer_dpk == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpk/'.$pembayaran2016->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
 						<?php }} ?>
 					</tbody>
 				</table>
@@ -582,8 +582,8 @@
 						<th>Icn</th>
 						<th>Rekomendasi</th>
 						<th>Kontribusi Gedung</th>
-						<th>DPW</th>
 						<th>DPP</th>
+						<th>DPW</th>
 						<th>DPD</th>
 						<th>DPK</th>
 					</tr>
@@ -604,10 +604,10 @@
 						<td><?php echo format_rupiah($pembayaran2017->icn) ?></td>
 						<td><?php echo format_rupiah($pembayaran2017->rekomendasi) ?></td>
 						<td><?php echo format_rupiah($pembayaran2017->kontribusi_gedung) ?></td>
-						<td><?php if($pembayaran2017->status_transfer_dpp == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="#">Ubah Status</a></td>
-						<td><?php if($pembayaran2017->status_transfer_dpw == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="#">Ubah Status</a></td>
-						<td><?php if($pembayaran2017->status_transfer_dpd == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="#">Ubah Status</a></td>
-						<td><?php if($pembayaran2017->status_transfer_dpk == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="#">Ubah Status</a></td>
+						<td><?php if($pembayaran2017->status_transfer_dpp == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpp/'.$pembayaran2017->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
+						<td><?php if($pembayaran2017->status_transfer_dpw == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpw/'.$pembayaran2017->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
+						<td><?php if($pembayaran2017->status_transfer_dpd == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpd/'.$pembayaran2017->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
+						<td><?php if($pembayaran2017->status_transfer_dpk == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpk/'.$pembayaran2017->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
 						<?php }} ?>
 					</tbody>
 				</table>
@@ -619,7 +619,7 @@
               <?php }elseif($tahundaftar == 2016){ ?>
               <div class="nav-tabs-custom">
                 <ul class="nav nav-tabs">
-                  <li class="active"><a href="#detail2016" data-toggle="tab">Detail Pembayaran 2016</a></li>
+				  <li class="active"><a href="#detail2016" data-toggle="tab">Detail Pembayaran 2016</a></li>
                   <li><a href="#detail2017" data-toggle="tab">Detail Pembayaran 2017</a></li>
                 </ul>
                 <div class="tab-content">
@@ -638,8 +638,8 @@
 						<th>Icn</th>
 						<th>Rekomendasi</th>
 						<th>Kontribusi Gedung</th>
-						<th>DPW</th>
 						<th>DPP</th>
+						<th>DPW</th>
 						<th>DPD</th>
 						<th>DPK</th>
 					</tr>
@@ -660,10 +660,10 @@
 						<td><?php echo format_rupiah($pembayaran2016->icn) ?></td>
 						<td><?php echo format_rupiah($pembayaran2016->rekomendasi) ?></td>
 						<td><?php echo format_rupiah($pembayaran2016->kontribusi_gedung) ?></td>
-						<td><?php if($pembayaran2016->status_transfer_dpp == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpp/'.$pembayaran2016->id_pembayaran.'')?>">Ubah Status</a></td>
-						<td><?php if($pembayaran2016->status_transfer_dpw == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpw/'.$pembayaran2016->id_pembayaran.'')?>">Ubah Status</a></td>
-						<td><?php if($pembayaran2016->status_transfer_dpd == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpd/'.$pembayaran2016->id_pembayaran.'')?>">Ubah Status</a></td>
-						<td><?php if($pembayaran2016->status_transfer_dpk == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpk/'.$pembayaran2016->id_pembayaran.'')?>">Ubah Status</a></td>
+						<td><?php if($pembayaran2016->status_transfer_dpp == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpp/'.$pembayaran2016->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
+						<td><?php if($pembayaran2016->status_transfer_dpw == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpw/'.$pembayaran2016->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
+						<td><?php if($pembayaran2016->status_transfer_dpd == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpd/'.$pembayaran2016->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
+						<td><?php if($pembayaran2016->status_transfer_dpk == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpk/'.$pembayaran2016->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
 						<?php }} ?>
 					</tbody>
 				</table>
@@ -684,8 +684,8 @@
 						<th>Icn</th>
 						<th>Rekomendasi</th>
 						<th>Kontribusi Gedung</th>
-						<th>DPW</th>
 						<th>DPP</th>
+						<th>DPW</th>
 						<th>DPD</th>
 						<th>DPK</th>
 					</tr>
@@ -706,10 +706,10 @@
 						<td><?php echo format_rupiah($pembayaran2017->icn) ?></td>
 						<td><?php echo format_rupiah($pembayaran2017->rekomendasi) ?></td>
 						<td><?php echo format_rupiah($pembayaran2017->kontribusi_gedung) ?></td>
-						<td><?php if($pembayaran2017->status_transfer_dpp == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="#">Ubah Status</a></td>
-						<td><?php if($pembayaran2017->status_transfer_dpw == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="#">Ubah Status</a></td>
-						<td><?php if($pembayaran2017->status_transfer_dpd == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="#">Ubah Status</a></td>
-						<td><?php if($pembayaran2017->status_transfer_dpk == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="#">Ubah Status</a></td>
+						<td><?php if($pembayaran2017->status_transfer_dpp == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpp/'.$pembayaran2017->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
+						<td><?php if($pembayaran2017->status_transfer_dpw == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpw/'.$pembayaran2017->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
+						<td><?php if($pembayaran2017->status_transfer_dpd == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpd/'.$pembayaran2017->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
+						<td><?php if($pembayaran2017->status_transfer_dpk == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpk/'.$pembayaran2017->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
 						<?php }} ?>
 					</tbody>
 				</table>
@@ -721,7 +721,7 @@
               <?php }elseif($tahundaftar == 2017){ ?>
               <div class="nav-tabs-custom">
                 <ul class="nav nav-tabs">
-                  <li class="active"><a href="#detail2017" data-toggle="tab">Detail Pembayaran 2017</a></li>
+				  <li class="active"><a href="#detail2017" data-toggle="tab">Detail Pembayaran 2017</a></li>
                 </ul>
                 <div class="tab-content">
                   <div class="active tab-pane" id="detail2017">
@@ -739,8 +739,8 @@
 						<th>Icn</th>
 						<th>Rekomendasi</th>
 						<th>Kontribusi Gedung</th>
-						<th>DPW</th>
 						<th>DPP</th>
+						<th>DPW</th>
 						<th>DPD</th>
 						<th>DPK</th>
 					</tr>
@@ -752,7 +752,7 @@
 						{ ?>
 							<tr>
 						<?php if ($pembayaran2017 == NULL){?>
-						<td rowspan="9">Data belum ada / Belum dimasukkan </td>
+						<td colspan="9">Data belum ada / Belum dimasukkan </td>
 						<?php }else{ ?>
 						<td><?php echo ++$start ?></td>
 						<td><?php echo format_rupiah($pembayaran2017->iuran_anggota) ?></td>
@@ -761,10 +761,10 @@
 						<td><?php echo format_rupiah($pembayaran2017->icn) ?></td>
 						<td><?php echo format_rupiah($pembayaran2017->rekomendasi) ?></td>
 						<td><?php echo format_rupiah($pembayaran2017->kontribusi_gedung) ?></td>
-						<td><?php if($pembayaran2017->status_transfer_dpp == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="#">Ubah Status</a></td>
-						<td><?php if($pembayaran2017->status_transfer_dpw == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="#">Ubah Status</a></td>
-						<td><?php if($pembayaran2017->status_transfer_dpd == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="#">Ubah Status</a></td>
-						<td><?php if($pembayaran2017->status_transfer_dpk == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="#">Ubah Status</a></td>
+						<td><?php if($pembayaran2017->status_transfer_dpp == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpp/'.$pembayaran2017->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
+						<td><?php if($pembayaran2017->status_transfer_dpw == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpw/'.$pembayaran2017->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
+						<td><?php if($pembayaran2017->status_transfer_dpd == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpd/'.$pembayaran2017->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
+						<td><?php if($pembayaran2017->status_transfer_dpk == 0){echo 'belum';}else{echo'sudah';} ?> - <a href="<?php echo site_url('peserta/update_status_dpk/'.$pembayaran2017->id_pembayaran.'/'.$id_peserta.'')?>">Ubah Status</a></td>
 						<?php }} ?>
 					</tbody>
 				</table>

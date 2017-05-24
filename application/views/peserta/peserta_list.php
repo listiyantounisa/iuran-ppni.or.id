@@ -9,59 +9,80 @@
 		<?php echo anchor(site_url('peserta/pdf'), '<i class="fa fa-file-pdf-o"></i> PDF', 'class="btn btn-primary btn-sm"'); ?></h3>
                 </div><!-- /.box-header -->
                 <div class='box-body'>
-        <table class="table table-bordered table-striped" id="mytable">
+        <table class="table table-bordered table-striped" id="table">
             <thead>
                 <tr>
                     <th width="80px">No</th>
-		    <th>Nama Peserta</th>
-		    <th>No Ktp</th>
-		    <th>No Anggota</th>
-		    <th>Tanggal Terdaftar</th>
-		    <th>Komisariat</th>
-		    <th>Action</th>
+        		    <th>Nama Peserta</th>
+        		    <th>No Ktp</th>
+        		    <th>No Anggota</th>
+        		    <th>Tanggal Terdaftar</th>
+        		    <th>Komisariat</th>
+        		    <th>Action</th>
                 </tr>
             </thead>
-	    <tbody>
-            <?php
-            $start = 0;
-            foreach ($peserta_data as $peserta)
-            {
-                ?>
-                <tr>
-		    <td><?php echo ++$start ?></td>
-		    <td><?php echo $peserta->nama_peserta ?></td>
-		    <td><?php echo $peserta->no_ktp ?></td>
-		    <td><?php echo $peserta->no_anggota ?></td>
-		    <td><?php echo $peserta->tanggal_terdaftar ?></td>
-		    <td><?php echo $peserta->komisariat ?></td>
-		    <td style="text-align:center" width="140px">
-			
-                <div class="dropdown">
-                <button class="btn btn-danger dropdown-toggle" type="button" data-toggle="dropdown">Pilihan
-                <span class="caret"></span></button>
-                <ul class="dropdown-menu">
-                <li><a href="peserta/detail_pembayaran/<?php echo $peserta->id_peserta ?>" title="Detail Pembayaran">Detail Pembayaran</a></li>
-                <li><a href="peserta/pembayaran/<?php echo $peserta->id_peserta ?>" title="detail">Pembayaran</a></li>
-                <li><a href="peserta/read/<?php echo $peserta->id_peserta ?>" title="detail">Detail Peserta</a></li>
-                <li><a href="peserta/update/<?php echo $peserta->id_peserta ?>" title="detail">Edit Data Peserta</a></li>
-                <li class="divider"></li>
-                <li><a href="peserta/delete/<?php echo $peserta->id_peserta ?>" title="delete" onclick="javasciprt: return confirm("Apakah anda yakin ?")">Hapus Records</a></li>
-                </ul>
-                </div>
-		    </td>
-	        </tr>
-                <?php
-            }
-            ?>
-            </tbody>
         </table>
         <script src="<?php echo base_url('assets/js/jquery-1.11.2.min.js') ?>"></script>
         <script src="<?php echo base_url('assets/datatables/jquery.dataTables.js') ?>"></script>
         <script src="<?php echo base_url('assets/datatables/dataTables.bootstrap.js') ?>"></script>
         <script type="text/javascript">
-            $(document).ready(function () {
-                $("#mytable").dataTable();
+            $(document).ready(function() {
+            $.fn.dataTableExt.oApi.fnPagingInfo = function(oSettings)
+            {
+                return {
+                    "iStart": oSettings._iDisplayStart,
+                    "iEnd": oSettings.fnDisplayEnd(),
+                    "iLength": oSettings._iDisplayLength,
+                    "iTotal": oSettings.fnRecordsTotal(),
+                    "iFilteredTotal": oSettings.fnRecordsDisplay(),
+                    "iPage": Math.ceil(oSettings._iDisplayStart / oSettings._iDisplayLength),
+                    "iTotalPages": Math.ceil(oSettings.fnRecordsDisplay() / oSettings._iDisplayLength)
+                };
+            };
+            
+            table = $("#table").dataTable({
+                initComplete: function() {
+                    var api = this.api();
+                    $('#table_filter input')
+                            .off('.DT')
+                            .on('keyup.DT', function(e) {
+                                if (e.keyCode == 13) {
+                                    api.search(this.value).draw();
+                        }
+                    });
+                },
+                oLanguage: {
+                    sProcessing: "Loading Data, please wait..."
+                },
+                processing: true,
+                serverSide: true,
+                ajax: {"url": "peserta/json", "type": "POST"},
+                columns: [
+                    {
+                        "data": "id_peserta",
+                        "orderable": false
+                    },
+                    {"data": "nama_peserta"},
+                    {"data": "no_ktp"},
+                    {"data": "no_anggota"},
+                    {"data": "tanggal_terdaftar"},
+                    {"data": "komisariat"},
+                    {
+                        "data" : "action",
+                        "orderable": false,
+                        "className" : "text-center"
+                    }
+                ],
+                order: [[0, 'desc']],
+                rowCallback: function(row, data, iDisplayIndex) {
+                    var info = this.fnPagingInfo();
+                    var page = info.iPage;
+                    var length = info.iLength;
+                    var index = page * length + (iDisplayIndex + 1);
+                    $('td:eq(0)', row).html(index);
+                }
             });
+        });
         </script>
                     </div><!-- /.box-body -->
               </div><!-- /.box -->
